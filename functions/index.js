@@ -11,6 +11,6 @@ server.on("connection", client => {
 });
 
 let PORT = functions.config().server.port || 3000;
-server.listen(PORT);
+
 console.log("Server listening on Port " + PORT);
-exports.app = functions.https.onRequest(server);
+exports.server = functions.https.onRequest(server);
